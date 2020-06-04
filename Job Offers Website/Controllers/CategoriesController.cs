@@ -11,11 +11,13 @@ using WebApplication3.Models;
 
 namespace Job_Offers_Website.Controllers
 {
+    [Authorize(Roles ="Admins")]
     public class CategoriesController : Controller
     {
         private ApplicationDbContext db = new ApplicationDbContext();
 
         // GET: Categories
+        [AllowAnonymous]
         public ActionResult Index()
         {
             return View(db.Categories.ToList());
