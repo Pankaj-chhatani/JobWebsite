@@ -36,5 +36,9 @@ namespace WebApplication3.Models
         public System.Data.Entity.DbSet<Job_Offers_Website.Models.Job> Jobs { get; set; }
 
         public System.Data.Entity.DbSet<Job_Offers_Website.Models.RoleViewModel> RoleViewModels { get; set; }
+
+        public System.Data.Entity.DbSet<Job_Offers_Website.Models.ApplyForJob> ApplyForJobs { get; set; }
+
+        public System.Data.Entity.DbSet<WebApplication3.Models.ApplicationUser> ApplicationUsers { get; set; }
     }
 }
