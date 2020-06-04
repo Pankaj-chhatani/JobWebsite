@@ -1,0 +1,41 @@
+﻿@model Job_Offers_Website.Models.Category
+
+@{
+    ViewBag.Title = "Suppression";
+    Layout = "~/Views/Shared/_MainLayout.cshtml";
+}
+
+<h2>Suppression</h2>
+
+<h3>Vous êtês sûr de supprimer ce type?</h3>
+<div>
+    <h4>Description du type</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.CategoryName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CategoryName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CategoryDescription)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CategoryDescription)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Supprimer" class="btn btn-danger" /> |
+            @Html.ActionLink("Retour", "Index")
+        </div>
+    }
+</div>
